@@ -8,14 +8,50 @@
     <link rel="icon" href="/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles.css">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>
-        Hello World
-    </h1>
-    <img src="/assets/images/cat.jpeg" alt="" width="300">
-
-
+    <section>
+        <div class="js-wrapper">
+            <form class="form">
+                <label class="form__label ">
+                    Name:
+                    <input 
+                        class="form__input js-input__name" 
+                        type="text"
+                        placeholder="John"
+                        required
+                        value>
+                    <p class="error error__name-1">** must have at least 2 characters</p>
+                    <p class="error error__name-2">** can contain only letters</p>
+                    <p class="error error__name-3">** max 50 characters</p>
+                </label>
+                <label class="form__label">
+                    Email:
+                    <input 
+                        class="form__input js-input__email" 
+                        type="email"
+                        placeholder="example@example.com"
+                        required
+                        value>
+                    <p class="error error-email">** must be in a valid format</p>
+                </label>
+                <label class="form__label">
+                    Password:
+                    <input 
+                        class="form__input js-input__password" 
+                        type="password"
+                        placeholder="**********"
+                        required
+                        value>
+                    <p class="error error-password-1">** must be at least 8 characters long</p>
+                    <p class="error error-password">** must contain at least 1 number and 1 special character (!, @, #, $, %, ^, &, *)</p>
+                </label>
+                <button class="form__submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    
     <script src="/scripts.js"></script>
 </body>
 </html>
